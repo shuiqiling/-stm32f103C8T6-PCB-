@@ -1,0 +1,822 @@
+{
+  "sourceCommit": "9697be2",
+  "archive": "archive/超声波智能避障小车.zip",
+  "note": "目录、文件名、编码和换行规范化；修正工程相对路径并显式指定STM32F10X_MD；应用函数逻辑保留，硬件文件字节保持原样。",
+  "files": [
+    {
+      "original": "超声波智能避障小车程序/Algorithm/Filtering.c",
+      "path": "firmware/Algorithm/Filtering.c",
+      "originalSha256": "e8c6e6b21217cfaef226b7823437c787ca9026a2cd9a57dd4e750149e9aa7883",
+      "normalizedSha256": "1d2b8132e9a65b0e2daff245787faf55ca6f7832291770be28b205387cd7d4f1",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Algorithm/Filtering.h",
+      "path": "firmware/Algorithm/Filtering.h",
+      "originalSha256": "a319df71aaa531975adb80c42253f86e3dbc57007ea5b7f03c556b5fbabdde55",
+      "normalizedSha256": "59cce8374ae21ac656d44209266aa2033ec1567207bba55c262365a6cde22442",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Algorithm/MotorPID.h",
+      "path": "firmware/Algorithm/MotorPID.h",
+      "originalSha256": "b2aef40712dbbe738e6952c708904033ef19fef491d72dd75c891edddd07e1d7",
+      "normalizedSha256": "55dfb9ac4293615375d37ca7c398abef5ea6a32f5a75dd0252c507ac12465738",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Algorithm/MototPID.c",
+      "path": "firmware/Algorithm/MotorPID.c",
+      "originalSha256": "8bb18091e65555fa2c0a09f76d09ae5b94c9a4c2936927d1e65c0f9fbf762d8e",
+      "normalizedSha256": "84dc21adbb70f31a38b8627e5e681dc9dc7dc92f1d44d6fa3e8816a2af5f3514",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Algorithm/Sorting.c",
+      "path": "firmware/Algorithm/Sorting.c",
+      "originalSha256": "7973d1be73f68112062410f28de68465dc094a46e29a685dd673aac9a88c93f2",
+      "normalizedSha256": "c0bfdb27a182781d4f422a607124dedfae4d3f6fd3916a334c921afb81d19e1c",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Algorithm/Sorting.h",
+      "path": "firmware/Algorithm/Sorting.h",
+      "originalSha256": "6e8515d69f48fa09c46eb1e65a945b4037ef7f687b8f3e5f066b46e0ddefd278",
+      "normalizedSha256": "263c80968b0192bd1e89e7ff2a9db7b88a1fa14bfecf4f10f5f38f2be853ca5d",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Application/APP_ActionControl.c",
+      "path": "firmware/Application/APP_ActionControl.c",
+      "originalSha256": "0178e85eabff619d197a3e0a9689ec66736d96084fe3e813a76cc02fb8765856",
+      "normalizedSha256": "39d4cefb8bf934964d4d24bcf60db45285191b6bbf77b3c9019411bf8bca0599",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Application/APP_ActionControl.h",
+      "path": "firmware/Application/APP_ActionControl.h",
+      "originalSha256": "a21782b11f7105ec4f25d22b7f98c1bcc538418f9e2e42b14156287c51d6f6db",
+      "normalizedSha256": "b33f11fe72d6583ad6e67cde3ab29db5f51a60342541926e310d95dc254e6765",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Application/APP_Obstacle_Avoidance.c",
+      "path": "firmware/Application/APP_Obstacle_Avoidance.c",
+      "originalSha256": "c1da51c6ae0e12f5bb236e53acce9868989e2a04923f5cbb6f0e884eeb97b74c",
+      "normalizedSha256": "732fcb2925a32a30d7760b01dbada0d53c9270201e606deefe14a9fa66452f77",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Application/APP_Obstacle_Avoidance.h",
+      "path": "firmware/Application/APP_Obstacle_Avoidance.h",
+      "originalSha256": "21f51a10e36fee923eee641aab54c52c496e6caf7692a35e0e56c306b89c1b39",
+      "normalizedSha256": "043dc79bed5aec953b2952e6694d39e345d8953bf6bd305ce0fbc872ea52bc73",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL.h",
+      "path": "firmware/HAL/HAL.h",
+      "originalSha256": "ec0f57019af9fcc8dbcb1ba259fc5065317d9c0005bd07b560867a0a2842e5ac",
+      "normalizedSha256": "ea1c61c9232d147aeaebd6fd519c48feb456f8fc5817eeeb2b52ebacbe46c488",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_HC_SR04.c",
+      "path": "firmware/HAL/HAL_HC_SR04.c",
+      "originalSha256": "6cd02d2ecd7a4a60d8394d52d6ce01be32834d3bfbe672a5927736e4321adb28",
+      "normalizedSha256": "dce20bef6af18a4fff0af1fe009ef168a1befdee79eb5356e073ef48fccf495b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_HC_SR04.h",
+      "path": "firmware/HAL/HAL_HC_SR04.h",
+      "originalSha256": "608c6d9b10b42b945fed3400c25b9e515389b8b7ba079352ecc725b23894f3ba",
+      "normalizedSha256": "284777aa7d1f284afe70cc59aa1a3d165ceaa8a9758ec255881f0b6172695314",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_MeasureSpeed.c",
+      "path": "firmware/HAL/HAL_MeasureSpeed.c",
+      "originalSha256": "384800b9d67bce75610c5fe25d58ad4d2cbec0401fd6ae6ae6b003071cc58b4a",
+      "normalizedSha256": "f430902bd450c1003bced95644d15deac7c8eff03a9d5b5c15b32b59840e2fa6",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_MeasureSpeed.h",
+      "path": "firmware/HAL/HAL_MeasureSpeed.h",
+      "originalSha256": "226d7672e1675f7155a5189ee48fef5082031dd080600414c52b8f901bcf39bd",
+      "normalizedSha256": "be5c2a097bd4e172b19223961cc6ab64f153dafe5ebaaa30d51be04706073029",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_Motor.c",
+      "path": "firmware/HAL/HAL_Motor.c",
+      "originalSha256": "4c8b858f928a4af27fe3b129b46aaf57fce8f33e06395e501d2dbac9250492af",
+      "normalizedSha256": "32a2bc582675cd58a4c2a9bcd77299c88d466a9132d9c34ca4fbeb261d251805",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_Motor.h",
+      "path": "firmware/HAL/HAL_Motor.h",
+      "originalSha256": "b8abe62be4a96172327f7ba554f99d25be770880776b264c2ccf09c631af958f",
+      "normalizedSha256": "79841f59c39e335514e6c42cb21edfd4694e3609dd744c50ce9765ce61de68b2",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_MPU6050.c",
+      "path": "firmware/HAL/HAL_MPU6050.c",
+      "originalSha256": "dc443a8b64840e1c210f98a5c3fd5b276df1ea3beae96b28870f4cada04839ac",
+      "normalizedSha256": "bbe17f139727efb0aec05fbf95df81c43b6be0b74363b30a0d791a6c87e6c9c9",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_MPU6050.h",
+      "path": "firmware/HAL/HAL_MPU6050.h",
+      "originalSha256": "f94304cdc9300f9699342d4e58c452180dc14d8db4e0917b92e3f063b4e18716",
+      "normalizedSha256": "690fb7525890c2e224b61c998de5f5108a2baa25fca809bf6180171f860859d7",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_PWM.c",
+      "path": "firmware/HAL/HAL_PWM.c",
+      "originalSha256": "d0d70c419e334b26dff9bbfe8b8f07b2a91c0d880881344a7de1b34720238382",
+      "normalizedSha256": "72dc02ad8a46c1500eac0ee9e3bb7bb4335a70b5a0f708386408f32b5e6cd21d",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_PWM.h",
+      "path": "firmware/HAL/HAL_PWM.h",
+      "originalSha256": "12285229ac9075860327355da763697559d3c59cdf4d330c2ddbd115a0f69c2a",
+      "normalizedSha256": "f39f3e90b74cbc8cf76f702dce31147562b5da0f9041f9c42b0b4f466165742e",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_Servo.c",
+      "path": "firmware/HAL/HAL_Servo.c",
+      "originalSha256": "df331f547df0a4118f24cd1fbb6dc2c2566e64225df16763e78973aa752f4665",
+      "normalizedSha256": "0e3cd15c0e0a7e5ac616f06e1e8f30b5c61fe8a45e4f5fbde82340ab21102962",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/HAL/HAL_Servo.h",
+      "path": "firmware/HAL/HAL_Servo.h",
+      "originalSha256": "36328f66a139a06be7a8eae455d7edc9799ca75d3b35d5e8652ef6387fd6e6cf",
+      "normalizedSha256": "77c155652b678661a4ead7b52a6a02e45a0802ee0d366be3c6c3526d95dc6afb",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/BUZ.c",
+      "path": "firmware/Hardware/BUZ.c",
+      "originalSha256": "9470a7723269768413e390a343e15b3e6eea1cd3462b9e6a0597fb9583dfc69e",
+      "normalizedSha256": "3081ca30a2ec911be07a0a312dc794b24626b2b43d34c364d0874a3134eb7743",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/BUZ.h",
+      "path": "firmware/Hardware/BUZ.h",
+      "originalSha256": "cf0543dc90f8985075169f2567c9e18983e6c66079e3ab20cf8e85a4f1114acc",
+      "normalizedSha256": "0beff0c154edf412afd73c284750d21c283a339d879e24eaa05cf5fa7bb87b8f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Encoder.c",
+      "path": "firmware/Hardware/Encoder.c",
+      "originalSha256": "5a4409b6580b777f7eff14c7f4651ae38223dfd5aad854bbb0de023731cf2449",
+      "normalizedSha256": "0156584d097117e4e27a6d59bf4c1585e65c767bb443c1bc598e4557418567f4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Encoder.h",
+      "path": "firmware/Hardware/Encoder.h",
+      "originalSha256": "5aa6dd7bf78f54e0a019806da4cc5d91bb9c4a70080fbcbfe5ccb979426eb312",
+      "normalizedSha256": "63788c9e56888efff947eedf6d7341057dc73a36a9437147d49104eb3fdef8ad",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/HC_SR04.c",
+      "path": "firmware/Hardware/HC_SR04.c",
+      "originalSha256": "7486a1f5f004c31cf33c0d327e7ba2e7dae656575f437f112b21b08ec60163d6",
+      "normalizedSha256": "c55497cf5841a44f2d9d9e4b31494a2006a75700ae1b67480b94ef6168070871",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/HC_SR04.h",
+      "path": "firmware/Hardware/HC_SR04.h",
+      "originalSha256": "92096161de00cd9a9b7927d6d465e9941bc0c9975f6c501d818e6433d8108d39",
+      "normalizedSha256": "97bf5c93a3ef81fd569ba794344bd0c51f273d6cca46e2a5830ef47e0e515708",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/KEY.c",
+      "path": "firmware/Hardware/KEY.c",
+      "originalSha256": "34bca1527995e65e513fb320ac0369fec0c16b6c744f8604855be263dea9d9f0",
+      "normalizedSha256": "f2b378ef6ac7cd0b1b222732bd17952fa4033161ddef5b12e751a6cb5d7f9f26",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/KEY.h",
+      "path": "firmware/Hardware/KEY.h",
+      "originalSha256": "b17b81d863f1246ac2c919f3e12c01938d5ac51cba5d1ccf4ee66b4252c13c79",
+      "normalizedSha256": "ca71bd9b9a3cc5f4feb3b6e12294016c48bf3be597afe75e1c7719997f36213e",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/MeasureSpeed.c",
+      "path": "firmware/Hardware/MeasureSpeed.c",
+      "originalSha256": "a9f8907603e7b0bfd28848aa0730f662cabf88741b908d776524295f2cc3dfaa",
+      "normalizedSha256": "001db58447fd3ab6387ddd97e9bd5032edd22f14ba1450cc8db258067000a2c9",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/MeasureSpeed.h",
+      "path": "firmware/Hardware/MeasureSpeed.h",
+      "originalSha256": "d4a7ffd3fdd3af1ab8a32d63bbfc2093cd41f962a0a402526e56a6669b9e3f7a",
+      "normalizedSha256": "9944c8127fed95831335d9eb8e83b3ed465629ab65bc697ca926db869b6d4bb8",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Motor.c",
+      "path": "firmware/Hardware/Motor.c",
+      "originalSha256": "acb46ff116ed1bac3822ab9f224d552a0965be49a4d609b90ee2c5bcd717104a",
+      "normalizedSha256": "fe375f5ea2696eb1aea65c84690504e9112f418b5781afda33c3e69bb385aee4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Motor.h",
+      "path": "firmware/Hardware/Motor.h",
+      "originalSha256": "32752f11968fad14342494565083c74865e652cda6a47b3cc56046a093f44d5b",
+      "normalizedSha256": "a8c620fd2dc89a03e8c880fbace5cf7c9ae0d429eb0034fd5d4a5be5904d165a",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/MPU6050.c",
+      "path": "firmware/Hardware/MPU6050.c",
+      "originalSha256": "17c4b92814b2b2b4b1aeeed0d57ba7bdc184d624800b2a8bf9455fe02f719217",
+      "normalizedSha256": "8ba055f9ca232e50f14fbafa98e3edad86fe5efc22e4deaaa8f95485ddba465c",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/MPU6050.h",
+      "path": "firmware/Hardware/MPU6050.h",
+      "originalSha256": "548417c61246fff8d3895d88686e3d17d9f67c1f44043ae7c890c5ce36e573ad",
+      "normalizedSha256": "9d605a2a4b4a83d9b81bb201880891e65c389a1e3c40a89806061de61af8e908",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/MPU6050_Reg.h",
+      "path": "firmware/Hardware/MPU6050_Reg.h",
+      "originalSha256": "533edf239ea7f6a85252876e599c8ab6331f96f31853c90ff96b9841263da513",
+      "normalizedSha256": "41985fc8263709c63b96ed8c2c4165abebefd9483f7051c6a1588d8eb7c4761b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/OLED.c",
+      "path": "firmware/Hardware/OLED.c",
+      "originalSha256": "93f0be70bb5a76ec658e61a7490db9fd7ab91fb14c44ef393b3bb0595aec92b9",
+      "normalizedSha256": "43a8d3bc981c66e55472139100b97650f42442bf0e7d00677ea138c8cdcb2ff1",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/OLED.h",
+      "path": "firmware/Hardware/OLED.h",
+      "originalSha256": "6a54200954374538660f0777fd31c1becaaa5176cae2dc942598ecde2ec17514",
+      "normalizedSha256": "c1bc3104575023e3398fd5b42b69d602faf56ab6a1712aad3b4a6a2e28777e6b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/OLED_Font.h",
+      "path": "firmware/Hardware/OLED_Font.h",
+      "originalSha256": "eb0b76b2dd439421b628908f1f368389ab15951462d9add89f450b934ece38a0",
+      "normalizedSha256": "b14924bff29ef8e07f3aa069359013955043bd2044327969d4cbd79b66890e73",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/PWM.c",
+      "path": "firmware/Hardware/PWM.c",
+      "originalSha256": "3393605036a89490bfe4414f38844907f31968d9162618a0ed67e0891f9e38cb",
+      "normalizedSha256": "0dd2d8fe5047581f241df315a0b66317831db69202d2d6227fc41c65103bd9eb",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/PWM.h",
+      "path": "firmware/Hardware/PWM.h",
+      "originalSha256": "1d4ba64b303e37d3514c72d84afb7428e32dd74a8eb331f5c6a9a5ba2e3a3c19",
+      "normalizedSha256": "4edac5942e7396a13e135b4b977f8409b2e3f96d52dcd96fa5f06e50f8444dca",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Servo.c",
+      "path": "firmware/Hardware/Servo.c",
+      "originalSha256": "d609cdcc461ce22c96a3e3c4e3b4bf72f1b615448f3040115b3ddbe1240c379a",
+      "normalizedSha256": "14d6a4850d8ef962fd8b3d383684f3bd2607644780b9495f87d680b3f984cdc2",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/Hardware/Servo.h",
+      "path": "firmware/Hardware/Servo.h",
+      "originalSha256": "1a47ff453b066f652bb61e3cf01e3b88f761ce69f7ead67b96416865d15328c9",
+      "normalizedSha256": "df888a40b32eeaac2d3daf007ffe8e2ada6f2976f7c6ce66a0292b8bbbe4e859",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/system/Delay.c",
+      "path": "firmware/System/Delay.c",
+      "originalSha256": "03afaf6279ef043efb2dbe9468a0405fd187b0c32c3f100d3e9e6ece0bd1d64d",
+      "normalizedSha256": "10259968183f3b9ae516505a5454d08e1872672f24fe85b58557e3bcc0344aa0",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/system/Delay.h",
+      "path": "firmware/System/Delay.h",
+      "originalSha256": "f0bf8cbd91c797ef0e64860ae1d05dc310481fd97e72fc487401b131af1346ad",
+      "normalizedSha256": "ffa1607d7514f006a7a94f17d8a15b3bdb20cd6ca8cd081b4de41526ca45c4ef",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/system/TIM.c",
+      "path": "firmware/System/TIM.c",
+      "originalSha256": "b560dcafc876414866b33f2d156fc63ee4313ab41a8fe80fe9b3d436e4542e69",
+      "normalizedSha256": "a8d7bbff05e0b540013651c069852be9ef3209e05a1dd3be71880f1a4a97c0a2",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/system/TIM.h",
+      "path": "firmware/System/TIM.h",
+      "originalSha256": "21ea29b2af2fcb02cbc84b0514562f305505f05f1b5f5d2a1bb488c3c41e8ef1",
+      "normalizedSha256": "ef98431c20fed7091a86436a1b2cb7289fff79319bdaed3757a973a70d0b0647",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/user/main.c",
+      "path": "firmware/User/main.c",
+      "originalSha256": "5b954187ff691b88faa22ace3700577b563b683886b1b13d6675f66dc1992639",
+      "normalizedSha256": "15e0f83a8d4c9e273c2c72b3d6728e762416cb4d571f732b27d849daf41915c7",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/user/stm32f10x_conf.h",
+      "path": "firmware/User/stm32f10x_conf.h",
+      "originalSha256": "d5f06afeb57a339fd877ec6bd7f75bd8a940a38108ce69ed3cb591caa4cd0620",
+      "normalizedSha256": "92bb35a2ce3f667161da0818ac29e7380e4b3ec8f9ed3571c12b8cd2b9d53bb1",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/user/stm32f10x_it.c",
+      "path": "firmware/User/stm32f10x_it.c",
+      "originalSha256": "317179050a5070dbd5357385cc7eea92d309d92797e9b3e84f864776ea8dd51e",
+      "normalizedSha256": "b383d877ac091948a170271eb2b4ba5d6ab94c605f59570c9b362a4c700128f3",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/user/stm32f10x_it.h",
+      "path": "firmware/User/stm32f10x_it.h",
+      "originalSha256": "d41e14c819d2df2adca148e514a8d36290afbf94ac8319ac9694dde2a6e0f747",
+      "normalizedSha256": "6b4602e74c2cd1fb2dfff646595797217af1c587ea71e1c99e4fa0d95aa50d48",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/core_cm3.c",
+      "path": "firmware/Libraries/CMSIS/core_cm3.c",
+      "originalSha256": "e93a7e36349e7810f328276a3fed56701e10536779f7527a8ccd140618a556b0",
+      "normalizedSha256": "d7d5380c8099fa98e80646adfa07f23de6d4b01257168cea45ed859baa26d8e1",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/core_cm3.h",
+      "path": "firmware/Libraries/CMSIS/core_cm3.h",
+      "originalSha256": "de4668aa9d314d05769dfb29f028e205b50577c6b2150fc6bccb34bd34179bbb",
+      "normalizedSha256": "b99c6eb3657984bcbf178da25ecf8ec47d5eaef6f41f4b07ade9ee61ee2ee47b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_cl.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_cl.s",
+      "originalSha256": "fe249e5ec3856feb2596bda8a09eed91a5b7d634abc96fc2981c24c1260e204d",
+      "normalizedSha256": "c7356f356fd0b9af1317998d1335842d9fbfe2cbfe72dd26c13d9a696bebf8aa",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_hd.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_hd.s",
+      "originalSha256": "1ad6e0a965254d4cd1a6cc289011214c8d3f1468d77e9ad1f235d80792cda2fc",
+      "normalizedSha256": "28f815230f848b62db9f28a9c02666373ba485c009a89eebab980e19afcb60ea",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_hd_vl.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_hd_vl.s",
+      "originalSha256": "1c20befd815cc2707370a3ff530c0e050db4a90d5d76a270290e3c3495f76f3c",
+      "normalizedSha256": "1aaf88214b8aec67bdf07c02ac92d20b511970813a0f0a8b74bc647873ac59c0",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_ld.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_ld.s",
+      "originalSha256": "d36ebab687be79789ac7250e1e70310ae7ea4f7de7a6fddc1deda4a134263977",
+      "normalizedSha256": "6061bdfb103cfdd5d691b380c93dc57d2c2d27438a7d120c8b8ced9dd26b6ee4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_ld_vl.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_ld_vl.s",
+      "originalSha256": "ad7afad5352f4ebef018c689d40fda1834805c8a9c3f67a3826f6e8d15d2f41f",
+      "normalizedSha256": "f7cb7b1a07b3364f1b05995c37da45b8b7350ee091a623540384cd8f40e33cd4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_md.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_md.s",
+      "originalSha256": "8bff69adff662663c0fcbee4cfbeb3ed9ff2b7501527f24815789f2736420d23",
+      "normalizedSha256": "910d16a9c083dc76d9814ccafd2996c7df36623c4d1adfdd5a694dc86da6064f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_md_vl.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_md_vl.s",
+      "originalSha256": "4d453f0a56a416ef6f1f6ff3f3ecdd3e65c1f055b46c0be1fde0bcf47535498b",
+      "normalizedSha256": "9d14ed3f62ee6163b6cafed8875db5addeab8ce026852bb5bbae60b7bc5cb28d",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/startup_stm32f10x_xl.s",
+      "path": "firmware/Libraries/CMSIS/startup_stm32f10x_xl.s",
+      "originalSha256": "0946ba9c61c7cf85f5669b0ce38cf393177e5e1a735666331587dcf124019a18",
+      "normalizedSha256": "63a26c8af1e36e384c32e7823d7500406281bf4580ff89f422b0589f6a10cf06",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/stm32f10x.h",
+      "path": "firmware/Libraries/CMSIS/stm32f10x.h",
+      "originalSha256": "4ee722d262c1e7d7505d7dc7eeb8ccaaf67158b51ee4bc177397cd64e74e1b3a",
+      "normalizedSha256": "fbbff7007fbb6ede88df4b40b7602e02c47912553b165f1d077df3f5aa6ef4e9",
+      "sourceEncoding": "cp1252"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/system_stm32f10x.c",
+      "path": "firmware/Libraries/CMSIS/system_stm32f10x.c",
+      "originalSha256": "45f52950f5fc6509920fb26d1362e8457907c2d62fa455cbe3c6ce6daa974a76",
+      "normalizedSha256": "8b8d29cc88d05f4526bb8216b3452c36bf178a776bae12d9e94b2a21bac641ef",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/start/system_stm32f10x.h",
+      "path": "firmware/Libraries/CMSIS/system_stm32f10x.h",
+      "originalSha256": "919dc1f5c6bbba74cb712e8ec7cf73f1988eafa9438c706526fb401a2ab4672d",
+      "normalizedSha256": "ecdb1404de1049439ea15d0fb8800f48fba4340b7b35c6b46af8f16b99ee78c1",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/misc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/misc.c",
+      "originalSha256": "152c632e56151b2564121c56ff359d0f041621f0da6ed101d7fd376a139a5c75",
+      "normalizedSha256": "cfb10a90337813b239d296362d72119a8d5b64325e0a6009ff62e2910628097f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/misc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/misc.h",
+      "originalSha256": "40c918f726035dfa67a7bfadefac8e922196d7918f915a7f2db1e652625c7e41",
+      "normalizedSha256": "ae3176d61dff5e7253c2797cba49bdbced720860e2c40e6f18d534979fe9299c",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_adc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_adc.c",
+      "originalSha256": "d269b826f617c7b1426155cdfc8a220d05aee74580b80b92f86bf33ea9d8be98",
+      "normalizedSha256": "8690fc655ee98647487f672e1c302ef0f53872ca4ba126fbd4255ca38075dccf",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_adc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_adc.h",
+      "originalSha256": "005a122259e9657bd6b3171dd0e478c143c2a70f8e364b505b84f3fd0a8b1b9f",
+      "normalizedSha256": "e17b153ce8cd814b9f03098bc449aa2fe4aa98f8ad2d73c60b5b9c25678bb07a",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_bkp.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_bkp.c",
+      "originalSha256": "f78d5077029cfec54da52ea4f9d8796dabdf1da5dc6cc29e3395e0f6923645a0",
+      "normalizedSha256": "f4defd6318465abaff6739d9ad6586fefc7c5a6d0fc7e0f4af8dd6d916416c4b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_bkp.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_bkp.h",
+      "originalSha256": "bd3ae6fe6a6e617216d60a11a7437be97dca2ea02f3ad78afe889850473fdb16",
+      "normalizedSha256": "65d815ef8212c1eec3fcb7ffe354b2799eabdba50d9bdf6a95a05890889f7922",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_can.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_can.c",
+      "originalSha256": "bf9d3bec0785b8f28d9eb046bc67181071586e10014d4f595ba0e582257f31ad",
+      "normalizedSha256": "273f6d2cb35685f2bee47e200b89cbdf54a7fe6f1dad034a1d95838a689be6be",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_can.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_can.h",
+      "originalSha256": "df4e1602f2b208b335fa22890908ff518de18c6e27ffb94b92cd498e8212b248",
+      "normalizedSha256": "628ec24be22b390342e1d915d0d6d001473bd641a75b094ec575dc217a241bd3",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_cec.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_cec.c",
+      "originalSha256": "5cf689d7a2ecc3244b18099ae254dc6b0bff023406c898a82dbbd42a29b86e7c",
+      "normalizedSha256": "18c1ed9def8082677700f5084108e3add7e817d798140f996825a1cf2194e4f7",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_cec.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_cec.h",
+      "originalSha256": "620485eb06b33c96a5a8de3fb1116db876162a44da15441883f0cc675e890059",
+      "normalizedSha256": "793932fae5488a3475588fdcc1762108d0b4200bcaad8d39ff268afe6ca46ffd",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_crc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_crc.c",
+      "originalSha256": "962aa1381467118ee7e9bea68ad01b3ca3f9fbbd749242211e2d340bf896d0d4",
+      "normalizedSha256": "f33736ec96442b800f0e3b40634849c1b5a015e5ac4ccdfe66843b8e17dde5ce",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_crc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_crc.h",
+      "originalSha256": "98e5537eb5e8837de2170472b774d9f9559f14b60dfcb09d9f839611bc18cb66",
+      "normalizedSha256": "aafb09307fad41a3b591ed3bdd514e5ee9ce7aaea63cd914c0384c5f3dfe6526",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dac.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dac.c",
+      "originalSha256": "789a92c1dbb0dc74688fff8e415a93da816956a7a44882488d25af7ac055cbc7",
+      "normalizedSha256": "1bfe4a163c245a84b55bd42525837de8b2f9d711de7d347a2ea6cb2f86682df5",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dac.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dac.h",
+      "originalSha256": "446107ab9e933ccc284be0cd8f0c32edc3e96ba6f990dea8bd1f1cf080d35ef6",
+      "normalizedSha256": "ecc0b190ac4c6e0c7963e76e0fd20376534362991de85baa25b1a473afbd73e4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dbgmcu.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dbgmcu.c",
+      "originalSha256": "9bfb6f964cd3b06a04c67772e52f31814e5a3d39a951a27bf9f2ef352237e23d",
+      "normalizedSha256": "72a0c1e91493e837a817f37750f167a51d96d66fed8aa061d52526ae0c0c2c07",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dbgmcu.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dbgmcu.h",
+      "originalSha256": "998751256df8a0423dc73be45e489fc04cb2b124a6f04a6ad65e4d53e59f45ba",
+      "normalizedSha256": "6373fb74146df97fafc935b0e5aa6dcc2feb81e3d8f99e37b6421196b9d11190",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dma.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dma.c",
+      "originalSha256": "b0ac759af150deaa84d8a337a8873a2fbc03e36b1db6623175ab2443efa45d6f",
+      "normalizedSha256": "7534f7505f83f37063c99076a84ac26cc86a98e79c9fff74ba0595811ca3c998",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_dma.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_dma.h",
+      "originalSha256": "2ba038050d07735a42645f2508e62078c217dc750878097f7f113660e0d58ffb",
+      "normalizedSha256": "37803dc8ced751695d0b735af28b6d4a8ee6890c9217055efe069bf4b845038f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_exti.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_exti.c",
+      "originalSha256": "5783d10d46275d8baee9f2861cf434b5c12a4bc8f42ed4af9e503c1818941ebe",
+      "normalizedSha256": "80340cbf4363c8e4b560b24aed060aec9586b9a890e1ca9919cef9488dee9abb",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_exti.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_exti.h",
+      "originalSha256": "661b039483459137a58bfdea7522528b9b6e923d61966d4c7c8a5035bd375f5f",
+      "normalizedSha256": "f2e97c87cbba58d25ed9dbf5422065d442f473239e9d499939b15867e5463918",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_flash.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_flash.c",
+      "originalSha256": "a04fcf26499252a6b02de1cefd33c26b8802d5ff1f9bef920bbddeefdd602f43",
+      "normalizedSha256": "402cfe1537f684938b0f2c8f95cfd80f69d883f72ea9a45306732592e7cfffd2",
+      "sourceEncoding": "cp1252"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_flash.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_flash.h",
+      "originalSha256": "952ca72ee4d01e49d392d55af2b146bd9f15763230660334e78ac2cad8cb8982",
+      "normalizedSha256": "a2848c5b29be212c52f23a2e06f27ea13c83f4f2761e98989209e8d39ea6076f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_fsmc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_fsmc.c",
+      "originalSha256": "1b623840bba04095a150fcf051fd2a3df4838799b96ae2e36f28675e92c23e44",
+      "normalizedSha256": "d69fc07043c4e4c8544118face1be2818c4b9c566c326acaec6d6e0ac6e267c4",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_fsmc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_fsmc.h",
+      "originalSha256": "b2e640d05f6dd11e1fe70bfa0db8aa53cb0a918eef412d6a35630b1357dc5ff6",
+      "normalizedSha256": "131e3152283b0af89b4ea67784f472a1b145ab47b79e1ce8fb0d64c3204a2f0d",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_gpio.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_gpio.c",
+      "originalSha256": "8255650b583b2bab2c320e0974309a6ccf26f661e7ad1b54282c0f0e2b9a1acf",
+      "normalizedSha256": "b3e9324054e8dfb38d72c4baf14ee524bc6d34b468a7121bbfd6a681aa517b51",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_gpio.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_gpio.h",
+      "originalSha256": "ef945fe7b2e4a8f3bf8fa22d44274085444dec80424f91606a1467ea4e69626f",
+      "normalizedSha256": "6a000ffb31648d88b89cc66ae8e48dea6f6820f81e775540d370d0564c46db9b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_i2c.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_i2c.c",
+      "originalSha256": "5014d8cf824a3f3d4fca09241352e82177752ebf2a5a97a6de2fb8968e6d44c9",
+      "normalizedSha256": "1b6b5d293714113305aad96bbdbfe95fd35c3aae227efb582c31fbadd6c5fa67",
+      "sourceEncoding": "cp1252"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_i2c.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_i2c.h",
+      "originalSha256": "08b14d416090815765a02e6fecf78cbdd3de4ad330d3bc04b2133f8f4f3f2daa",
+      "normalizedSha256": "137a9bae0378b15cbea903d7caa131344424beb720d747eb865f7c5f877a94a0",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_iwdg.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_iwdg.c",
+      "originalSha256": "bdae6086ce189dac8d464d10bb2ab58a957bbd8f89834e1cc7716faf3e34c9ce",
+      "normalizedSha256": "83cf083239ae830bd7d50beab2418504425b906cb45bbea99fbbaa5cda4e0303",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_iwdg.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_iwdg.h",
+      "originalSha256": "4a0e65ceebeb69dee10923ab5478938ec7af1357849fbf862d45d19dbb01091a",
+      "normalizedSha256": "eccd26dc85bbb490c6f0ce7f81301af6cbbb8134abe384fe883cd0954bcf6ba8",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_pwr.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_pwr.c",
+      "originalSha256": "3f8c77033caad162a69fe9780d7be2ab973f02be0e736e37c2e633f4a4e2bd28",
+      "normalizedSha256": "22caf565f5a56ed87419a9515aef1102c71c94240c0de7421186870bb6d3b06b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_pwr.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_pwr.h",
+      "originalSha256": "b7b31d2bfb3d56e763d70e9db4eecfc996664619916ac4bee9d9928430ffac79",
+      "normalizedSha256": "8fc0a2136218c78d512a87665f95c5ee960b433920eb6feabbb886d19f7a3427",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_rcc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_rcc.c",
+      "originalSha256": "f23bbc9b83e44e69f5dc34f072867f0087a3eb0452034ab09c363088d2354cd9",
+      "normalizedSha256": "524f177d9bac8b1ff7a59c41778e2986a61bc1e25e477d527bcffe77f4aa4274",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_rcc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_rcc.h",
+      "originalSha256": "894e140a70b0cdc94e4e96c5011def9dca5a103752783c3bb7cab538fc426f9e",
+      "normalizedSha256": "3bdd3d5e288d58875a4b16f45acd7e1ede270cd8af676052651b11a55e4741a8",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_rtc.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_rtc.c",
+      "originalSha256": "59bc07137d60efbbf69703b88e72bb2153c2e97beee16a1d262a7050686fb00b",
+      "normalizedSha256": "fbc6e3c7bdc6a3129de6f3ed286aee45c52180626c2a5d28a8cdae9d09a95075",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_rtc.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_rtc.h",
+      "originalSha256": "4a0ef73054c3f7f7ad325c6ef0268edb3c5e8987978bdac8a695dc548e13b94c",
+      "normalizedSha256": "b6cea13878d3179eb9e13f49d1e089ab1871b4b1c5d0d5e18acf7b43423daa8d",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_sdio.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_sdio.c",
+      "originalSha256": "d042b43fbfd5431719a7310ebe2d38c861a663d07e0c0735e466785e07fc1d97",
+      "normalizedSha256": "3ed4bc7cb7da5349bd166ce993953437b1dece65b3ed05e0ea8c2535871d3a61",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_sdio.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_sdio.h",
+      "originalSha256": "35f5d75421ab3c76d1d76e2c26d0910864161966cc16b74f8327c173ae123deb",
+      "normalizedSha256": "301f9b8af9492ba9333f41d43053d915bd0cfb4335267c5b11ea0285b01c8b8b",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_spi.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_spi.c",
+      "originalSha256": "0214f213058353f2fd9d3a4036ccabbea0b73b60aae0652acf36df539adbb9c6",
+      "normalizedSha256": "0ad7e60ab48104b0eb149cc6183a2903e5418d04f546860c140400885d2c44ce",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_spi.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_spi.h",
+      "originalSha256": "e5dce165ef95fd872a8802cc4f9205b389e4ecdd28a0d74f8aa6c9c3d1ea4225",
+      "normalizedSha256": "e720da27b236683945d441e05267c6087229e45d06eba3b01fd52749d8d594c7",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_tim.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_tim.c",
+      "originalSha256": "bd12bf18b03b8585ac2ba6bd0e80ec39d8fd0c89307eb54f5a7be38a46894d03",
+      "normalizedSha256": "de0c4d04e402e7c2be0f6db93c6dbc9db81af40046a12c58d32fae764388f42f",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_tim.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_tim.h",
+      "originalSha256": "dddf89f9b7134a2f15ed9cc2521589ee9a2e18c0553a6017c71b5d5b394524e5",
+      "normalizedSha256": "898c4a4b4b34509b4ee845cb913f18876a4f57e4f8fd50e549230d8724dbc899",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_usart.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_usart.c",
+      "originalSha256": "6d7af47017b01eb260fb7699f5c483e0a8576b4c780069a99975b7c6443030dd",
+      "normalizedSha256": "735668c2fd8a8c69ea0b032302bbf79478f92e7ff8de96d280f70ad0c63c3978",
+      "sourceEncoding": "cp1252"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_usart.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_usart.h",
+      "originalSha256": "9d4c2067e54defd64b000076e6561726d758c872d354bed6eea66a6767c08bce",
+      "normalizedSha256": "c48ae4a3d334ee6029e5c6de8132e6da1417eb332e89957b78a48a360088a4c8",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_wwdg.c",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_wwdg.c",
+      "originalSha256": "1d51fbbe3da7731b2303408f00693b51dbf62226590b1264cbbf35be01aa90ea",
+      "normalizedSha256": "07aae25d487eb32c85fb771fb13829e4779f2ae45e7a736739a43dc0e1a64e83",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/liberary/stm32f10x_wwdg.h",
+      "path": "firmware/Libraries/STM32F10x_StdPeriph_Driver/stm32f10x_wwdg.h",
+      "originalSha256": "eb1a01bbaa33babc416d8ecdb40b5a97a21522eb5c7952ba1bec09924580790e",
+      "normalizedSha256": "59f31ac4c3926a0e440069eabfcef11ee7913eba54162ae2e831b225a7cd5c8c",
+      "sourceEncoding": "utf-8"
+    },
+    {
+      "original": "超声波智能避障小车程序/DebugConfig/Target_1_STM32F103C8_1.0.0.dbgconf",
+      "path": "firmware/DebugConfig/Target_1_STM32F103C8_1.0.0.dbgconf",
+      "originalSha256": "c4495cbdb25b80794d6e183091fe25c669df4d0e5b3f5466e822fe608d2f82d1",
+      "normalizedSha256": "d3a596cfed4ff2cadf46926d7a809df670ef5eb8d085ef3e7d8825931b16bfec",
+      "sourceEncoding": "unchanged"
+    },
+    {
+      "original": "立创eda/BOM_智能避障小车_PCB1_2026-06-04.xlsx",
+      "path": "hardware/bom/bom.xlsx",
+      "sha256": "f32dc2518a47c33d8feaf0a06ebc8233661c2a625209750360c84129d37fc534",
+      "bytesPreserved": true
+    },
+    {
+      "original": "立创eda/Gerber_PCB1_2026-06-04.zip",
+      "path": "hardware/gerber/board-gerber.zip",
+      "sha256": "96bd4787f4eb9bcf9c4bcdb1e621a80505430b0c0472ef463d2a5844d67d61ce",
+      "bytesPreserved": true
+    },
+    {
+      "original": "立创eda/PCB_PCB1_2026-06-04.pdf",
+      "path": "hardware/pcb/pcb-layout.pdf",
+      "sha256": "35380ca8d4893735d11c222fa9b3ec55b1980f811969d006146ed6deaa2a89f8",
+      "bytesPreserved": true
+    },
+    {
+      "original": "立创eda/SCH_智能避障小车原理图_2026-06-04.pdf",
+      "path": "hardware/schematic/schematic.pdf",
+      "sha256": "49f910c23cdaa276f293f4df639cb12e9f19f17a9374c27e52445e9096323310",
+      "bytesPreserved": true
+    }
+  ]
+}
